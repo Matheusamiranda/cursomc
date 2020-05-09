@@ -1,5 +1,4 @@
-package resources;
-
+package com.matheusamiranda.cursomc.resources;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,3 +13,4 @@ public class CategoriaResource {
         return "REST esta funcionando!";
     }
 }
+
