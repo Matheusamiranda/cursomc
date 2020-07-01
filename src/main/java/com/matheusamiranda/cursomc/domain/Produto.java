@@ -1,7 +1,5 @@
 package com.matheusamiranda.cursomc.domain;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
