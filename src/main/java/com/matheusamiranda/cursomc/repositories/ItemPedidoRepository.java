@@ -1,10 +1,9 @@
 package com.matheusamiranda.cursomc.repositories;
 
+import com.matheusamiranda.cursomc.domain.ItemPedido;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.matheusamiranda.cursomc.domain.Categoria;
-
 @Repository
-public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
+public interface ItemPedidoRepository extends JpaRepository<ItemPedido, Integer> {
 }
