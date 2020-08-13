@@ -1,6 +1,7 @@
 package com.matheusamiranda.cursomc.services;
 
 import com.matheusamiranda.cursomc.domain.Categoria;
+import com.matheusamiranda.cursomc.domain.Cliente;
 import com.matheusamiranda.cursomc.dto.CategoriaDTO;
 import com.matheusamiranda.cursomc.repositories.CategoriaRepository;
 import com.matheusamiranda.cursomc.services.exceptions.DataIntegrityException;
@@ -31,7 +32,8 @@ public class CategoriaService {
     }
 
     public Categoria update(Categoria obj){
-        find(obj.getId());
+        Categoria newObj = find(obj.getId());
+        updateData(newObj, obj);
         return repo.save(obj);
     }
 
@@ -53,7 +55,11 @@ public class CategoriaService {
         return repo.findAll(pageRequest);
     }
 
-    public Categoria fromDTO(CategoriaDTO objDTO){
+    public Categoria fromDTO(CategoriaDTO objDTO) {
         return new Categoria(objDTO.getId(), objDTO.getNome());
     }
+    private void updateData(Categoria newObj, Categoria obj){
+        newObj.setNome(obj.getNome());
+    }
+
 }
