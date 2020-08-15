@@ -1,6 +1,5 @@
 package com.matheusamiranda.cursomc.resources.exception;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

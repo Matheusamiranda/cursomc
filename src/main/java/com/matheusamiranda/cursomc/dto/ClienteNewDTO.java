@@ -17,7 +17,7 @@ public class ClienteNewDTO implements Serializable {
     private String nome;
 
     @NotEmpty(message = "Preenchimento obrigatório")
-    @Email(message = "Email Inválido")
+    @Email(message = "Email Inválido.")
     private String email;
 
     @NotEmpty(message = "Preenchimento obrigatório")
@@ -43,7 +43,7 @@ public class ClienteNewDTO implements Serializable {
     private String telefone2;
     private String telefone3;
 
-    private Integer cidade;
+    private Integer cidadeId;
 
     public ClienteNewDTO(){
     }
@@ -144,11 +144,11 @@ public class ClienteNewDTO implements Serializable {
         this.telefone3 = telefone3;
     }
 
-    public Integer getCidade() {
-        return cidade;
+    public Integer getCidadeId() {
+        return cidadeId;
     }
 
-    public void setCidade(Integer cidade) {
-        this.cidade = cidade;
+    public void setCidadeId(Integer cidade) {
+        this.cidadeId = cidade;
     }
 }
