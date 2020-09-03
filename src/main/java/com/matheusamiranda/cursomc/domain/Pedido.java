@@ -116,13 +116,13 @@ public class Pedido implements Serializable {
     public String toString() {
         NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
-        final StringBuilder builder = new StringBuilder();
+        StringBuilder builder = new StringBuilder();
         builder.append("Pedido número: ");
         builder.append(getId());
         builder.append(", Instante: ");
         builder.append(sdf.format(getInstante()));
         builder.append(", Cliente: ");
-        builder.append(getCliente());
+        builder.append(getCliente().getNome());
         builder.append(", Situação do pagamento: ");
         try {
             builder.append(getPagamento().getEstado().getDescricao());
